@@ -16,7 +16,7 @@ public class Person {
    * @param someone the name of person.
    * @return string
    */
-  public String person(final String someone) {
+  public final String person(final String someone) {
     return String.format("Hello, %s!", someone);
   }
 }
