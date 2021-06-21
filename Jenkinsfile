@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy to Production'){
             steps{
                 timeout(time:5, unit:'DAYS'){
-                    input message:'Do you want to deploy on Production?' submitter:
+                    input message:'Do you want to deploy on Production?'
                 }
 
                 bulid job:'deploy-to-production'
