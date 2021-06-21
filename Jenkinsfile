@@ -29,7 +29,7 @@ pipeline {
                     input message:'Do you want to deploy on Production?'
                 }
 
-                bulid job:'deploy-to-production'
+                build job:'deploy-to-production'
             }
             post{
                 success {
