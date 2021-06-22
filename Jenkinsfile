@@ -29,12 +29,12 @@ pipeline {
             parallel{
                 stage('Deploy to Staging'){
                     steps{
-                        sh "scp -i /Users/deng/Downloads/tomcat-crm.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
+                        echo "scp -i /Users/deng/Downloads/tomcat-crm.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat/webapps"
                     }
                 }
                 stage('Deploy to Production'){
                     steps{
-                        sh "scp -i /Users/deng/Downloads/tomcat-crm.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat/webapps"
+                        echo "scp -i /Users/deng/Downloads/tomcat-crm.pem **/target/*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat/webapps"
                     }
                 }
             }
